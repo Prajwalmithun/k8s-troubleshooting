@@ -1,0 +1,44 @@
+# Kubernetes specific files
+*.log
+*.swp
+*.bak
+*.tmp
+*.out
+
+# Kubernetes config files
+kubeconfig
+.kube/
+
+# Helm specific files
+*.tgz
+.chart-releaser/
+.releases/
+
+# Terraform specific files
+*.tfstate
+*.tfstate.*
+.terraform/
+crash.log
+
+# Ansible specific files
+*.retry
+
+# Ignore secrets
+secrets.yaml
+secrets.yml
+*.enc
+
+# Ignore sensitive files
+*.key
+*.pem
+*.crt
+*.cert
+
+# Ignore IDE specific files
+.vscode/
+.idea/
+*.iml
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
