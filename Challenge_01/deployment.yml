@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: challenge-01
+  creationTimestamp: null
+  labels:
+    app: python-ms-deployment
+  name: python-ms-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: python-ms-deployment
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: python-ms-deployment
+    spec:
+      containers:
+      - image: zzzzzzzzzzzzzzzzzzzzzzzprajwal3498/python-ms-crisp-devops:latest
+        name: python-ms-crisp-devops
+        resources: {}
+status: {}

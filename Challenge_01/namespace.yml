@@ -1,0 +1,8 @@
+# k create ns challenge-01 --dry-run=client -o yaml
+apiVersion: v1
+kind: Namespace
+metadata:
+  creationTimestamp: null
+  name: challenge-01
+spec: {}
+status: {}

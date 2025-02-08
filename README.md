@@ -1,7 +1,8 @@
 # K8s-troubleshooting
 
 ## Table of Contents
-1. ImmagePullBackOff
+1. ImagePullBackOff
+
 
 
 
