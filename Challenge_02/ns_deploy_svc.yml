@@ -1,0 +1,52 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  creationTimestamp: null
+  name: challenge-02
+spec: {}
+status: {}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: challenge-02
+  creationTimestamp: null
+  labels:
+    app: python-ms-deployment
+  name: python-ms-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: python-ms-deployment
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: python-ms-deployment
+    spec:
+      containers:
+      - image: prajwal3498/python-ms-crisp-devops-private:latest
+        name: python-ms-crisp-devops
+        resources: {}
+status: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: challenge-02
+  creationTimestamp: null
+  labels:
+    app: python-ms-deployment
+  name: python-ms-svc
+spec:
+  ports:
+  - port: 777
+    protocol: TCP
+    targetPort: 7777
+  selector:
+    app: python-ms-deployment
+  type: NodePort
+status:
+  loadBalancer: {}
