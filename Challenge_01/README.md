@@ -12,25 +12,28 @@ Step 1: Check the namespace where the pod is running
 ```bash
 k get ns
 ```
-![image](../images/Challenge_02/ch2_01.png)
+![image](../images/Challenge_01/ch1_01.png)
 
 Step 2: Check the pod status. We see that the pod is in "ImagePullBackOff" state
 ```bash
 k get pods -n challenge-02
 ```
-![image](../images/Challenge_02/ch2_02.png)
+![image](../images/Challenge_01/ch1_02.png)
 
 Step 3: Check the pod events using the describe command
 ```bash
 k describe pod <POD_NAME> -n challenge-02
 ```
-![image](../images/Challenge_02/ch2_03.png)
+![image](../images/Challenge_01/ch1_03.png)
 
 Step 4: Try to pull the image manually
 ```bash
-docker pull prajwal3498/python-ms-crisp-devops-private
+docker pull zzzzzzzzzzzzzzzzzzzzzzzprajwal3498/python-ms-crisp-devops
 ```
-![image](../images/Challenge_02/ch2_04.png)
+![image](../images/Challenge_01/ch1_04.png)
+
+We see that the image is not available or the image name is incorrect.
+
 
 ## Solution
 
