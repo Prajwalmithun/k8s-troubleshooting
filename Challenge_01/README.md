@@ -16,13 +16,13 @@ k get ns
 
 Step 2: Check the pod status. We see that the pod is in "ImagePullBackOff" state
 ```bash
-k get pods -n challenge-02
+k get pods -n challenge-01
 ```
 ![image](../images/Challenge_01/ch1_02.png)
 
 Step 3: Check the pod events using the describe command
 ```bash
-k describe pod <POD_NAME> -n challenge-02
+k describe pod <POD_NAME> -n challenge-01
 ```
 ![image](../images/Challenge_01/ch1_03.png)
 
